@@ -5,6 +5,7 @@ import java.util.Calendar;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
@@ -14,9 +15,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.hibernate.annotations.Cascade;
+import br.com.caelum.financas.listener.MovimentacaoListener;
 
 @Entity
+@EntityListeners(value={MovimentacaoListener.class})
 public class Movimentacao {
 	
 	@Id 

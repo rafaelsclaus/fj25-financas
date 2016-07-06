@@ -28,10 +28,9 @@ public class TestaSalvaMovimentacaoComConta {
 		conta.setBanco("Banco Santander");
 		conta.setNumero("99999-9");
 		conta.setAgencia("0099");
-		conta.setTitular("maria");
+		conta.setTitular("Claus");
 		
 		movimentacao.setConta(conta);
-		movimentacao.setData(Calendar.getInstance());
 		movimentacao.setDescricao("Conta de luz - Abril 2010");
 		movimentacao.setValor(new BigDecimal("54"));
 		movimentacao.setTipoMovimentacao(TipoMovimentacao.SAIDA);
