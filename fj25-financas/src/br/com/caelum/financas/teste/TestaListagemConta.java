@@ -11,13 +11,13 @@ import br.com.caelum.financas.util.JPAUtil;
 public class TestaListagemConta {
 
 	public static void main(String[] args) {
-		
-EntityManager manager = new JPAUtil().getEntityManager();
-		
+
+		EntityManager manager = new JPAUtil().getEntityManager();
+
 		ContaDao dao = new ContaDao(manager);
-		
+
 		List<Conta> lista = dao.lista();
-		
+
 		for (Conta conta : lista) {
 			System.out.println(conta.getNumero());
 		}
